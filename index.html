@@ -55,14 +55,18 @@
         .logo-icon {
             width: 48px;
             height: 48px;
-            background: var(--accent);
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #000;
-            font-weight: bold;
-            font-size: 20px;
+            box-shadow: 
+                0 4px 14px rgba(0, 208, 158, 0.4),
+                0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.05);
+            box-shadow: 
+                0 6px 20px rgba(0, 208, 158, 0.5),
+                0 3px 6px rgba(0, 0, 0, 0.15);
         }
 
         .logo-text {
@@ -151,18 +155,18 @@
 <body>
     <div class="container">
         <div class="logo">
-            <div class="logo-icon">K</div>
+            <img src="app_icon.png" alt="KAPIK" class="logo-icon">
             <span class="logo-text">KAPIK</span>
         </div>
 
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: January 25, 2026</p>
+        <p class="updated">Last updated: January 27, 2026</p>
 
         <h2>Introduction</h2>
         <p>KAPIK ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
 
         <div class="highlight">
-            <p><strong>Key Point:</strong> KAPIK stores all your data locally on your device. We do not collect, transmit, or store any of your personal information on external servers.</p>
+            <p><strong>Key Point:</strong> KAPIK stores all your data locally on your device by default. If you enable optional AI-powered receipt parsing, OCR text may be sent to third-party AI services (Google Gemini or Groq) for processing.</p>
         </div>
 
         <h2>Information We Collect</h2>
@@ -186,20 +190,46 @@
         <h3>Notifications</h3>
         <p>If you enable notifications, we use local notifications to remind you about scheduled payments. No notification data is sent to external servers.</p>
 
+        <h3>AI Receipt Parsing (Optional)</h3>
+        <p>KAPIK offers an <strong>optional</strong> AI-powered receipt parsing feature that can improve accuracy when scanning receipts. This feature is <strong>disabled by default</strong> and requires you to provide your own API key.</p>
+        <p>When enabled, OCR-extracted text from your receipts may be sent to one of the following AI services for parsing:</p>
+        <ul>
+            <li><strong>Google Gemini</strong> — Google's AI service</li>
+            <li><strong>Groq</strong> — Groq's LLM inference service</li>
+        </ul>
+        <p><strong>Important:</strong></p>
+        <ul>
+            <li>Only the text extracted from receipts is sent — <strong>not the images themselves</strong></li>
+            <li>You choose which AI provider to use and provide your own API key</li>
+            <li>You can disable AI parsing at any time in Settings</li>
+            <li>Results are cached locally to minimize API requests</li>
+            <li>You can use the app in fully offline mode without any AI features</li>
+        </ul>
+
         <h2>Data Storage</h2>
         <p>All data is stored locally on your device using an encrypted SQLite database. Your data remains on your device and is not synced to any cloud service.</p>
 
         <h2>Data Sharing</h2>
         <p>We do <strong>not</strong> share, sell, or transfer your personal data to third parties. Your financial information stays on your device.</p>
+        <p>If you enable AI receipt parsing, OCR text is sent directly from your device to the AI provider you selected (Google or Groq) using your own API key. We do not have access to this data or your API keys.</p>
 
         <h2>Data Export</h2>
         <p>You can export your expense data to CSV format. This export is performed locally, and you control how and where to share the exported file.</p>
 
         <h2>Third-Party Services</h2>
-        <p>KAPIK uses the following on-device technologies:</p>
+        
+        <h3>On-Device (No Data Sent)</h3>
         <ul>
-            <li><strong>Google ML Kit</strong> — For on-device OCR text recognition (no data sent to Google servers)</li>
+            <li><strong>Google ML Kit</strong> — For on-device OCR text recognition. All processing happens locally on your device.</li>
         </ul>
+
+        <h3>Cloud Services (Optional, User-Enabled)</h3>
+        <p>If you enable AI receipt parsing, the following services may be used:</p>
+        <ul>
+            <li><strong>Google Gemini API</strong> — For AI-powered receipt text parsing. Subject to <a href="https://ai.google.dev/terms" target="_blank">Google's API Terms</a>.</li>
+            <li><strong>Groq API</strong> — Alternative AI provider for receipt parsing. Subject to <a href="https://groq.com/terms-of-use/" target="_blank">Groq's Terms of Use</a>.</li>
+        </ul>
+        <p>These services only receive OCR text when you explicitly enable AI parsing and provide your own API key. No data is sent to these services by default.</p>
 
         <h2>Children's Privacy</h2>
         <p>KAPIK is not intended for children under 13 years of age. We do not knowingly collect personal information from children.</p>
@@ -213,11 +243,13 @@
             <li>Access all your data (stored locally on your device)</li>
             <li>Delete all your data by uninstalling the app</li>
             <li>Export your data at any time</li>
+            <li>Disable AI features and use the app fully offline</li>
+            <li>Choose your preferred AI provider or use none at all</li>
         </ul>
 
         <h2>Contact Us</h2>
         <p>If you have questions about this Privacy Policy, please contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:support@kapik.app">support@kapik.app</a></p>
+        <p><strong>Email:</strong> <a href="mailto:bilouss.edu@gmail.com">bilouss.edu@gmail.com</a></p>
 
         <div class="footer">
             <p>© 2026 KAPIK. All rights reserved.</p>
