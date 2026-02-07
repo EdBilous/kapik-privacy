@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KAPIK Logo Export</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-family: -apple-system, sans-serif;
+            color: white;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, #00E6AC 0%, #00D09E 50%, #00A87D 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: 3%;
+            left: 3%;
+            right: 3%;
+            height: 45%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        /* 1024x1024 - App Store */
+        .size-1024 {
+            width: 1024px;
+            height: 1024px;
+            border-radius: 224px; /* iOS icon radius ~22% */
+            font-size: 500px;
+        }
+
+        /* 512x512 */
+        .size-512 {
+            width: 512px;
+            height: 512px;
+            border-radius: 112px;
+            font-size: 250px;
+        }
+
+        /* 180x180 - iPhone @3x */
+        .size-180 {
+            width: 180px;
+            height: 180px;
+            border-radius: 40px;
+            font-size: 88px;
+        }
+
+        /* 120x120 - iPhone @2x */
+        .size-120 {
+            width: 120px;
+            height: 120px;
+            border-radius: 27px;
+            font-size: 58px;
+        }
+
+        .row {
+            display: flex;
+            gap: 40px;
+            align-items: flex-end;
+        }
+
+        .icon-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h1 {
+            color: #00D09E;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>KAPIK Logo Export</h1>
+    <p>Клікніть правою кнопкою на потрібний розмір → "Зберегти зображення як..." або зробіть скріншот (Cmd+Shift+4 та виберіть область)</p>
+
+    <div class="icon-wrapper">
+        <div class="logo-icon size-1024">K</div>
+        <span class="label">1024×1024 (App Store)</span>
+    </div>
+
+    <div class="row">
+        <div class="icon-wrapper">
+            <div class="logo-icon size-512">K</div>
+            <span class="label">512×512</span>
+        </div>
+
+        <div class="icon-wrapper">
+            <div class="logo-icon size-180">K</div>
+            <span class="label">180×180 (iPhone @3x)</span>
+        </div>
+
+        <div class="icon-wrapper">
+            <div class="logo-icon size-120">K</div>
+            <span class="label">120×120 (iPhone @2x)</span>
+        </div>
+    </div>
+
+    <p style="margin-top: 40px;">
+        <strong>Порада:</strong> Для точного експорту використовуйте інструменти розробника (F12) → виберіть елемент → ПКМ → "Capture node screenshot"
+    </p>
+</body>
+</html>
