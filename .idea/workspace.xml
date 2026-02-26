@@ -24,12 +24,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/user/projects/kapik-privacy",
     "nodejs_package_manager_path": "npm",
@@ -81,6 +83,7 @@
       <workItem from="1769384123299" duration="98000" />
       <workItem from="1769552071766" duration="30000" />
       <workItem from="1770506488048" duration="217000" />
+      <workItem from="1772144907542" duration="1000" />
     </task>
     <servers />
   </component>
