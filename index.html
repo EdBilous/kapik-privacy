@@ -1,390 +1,396 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - KAPIK</title>
+    <title>Privacy Policy — KAPIK</title>
     <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0F111A" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#0C0C0E" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" href="app_icon.png">
     <link rel="apple-touch-icon" href="app_icon.png">
     <style>
         :root {
-            --accent: #00C4B4;
-            --accent-dark: #059669;
-            --accent-light: #34D399;
-            --accent-glow: rgba(0, 196, 180, 0.10);
-            --accent-glow-strong: rgba(0, 196, 180, 0.16);
             --bg: #F2F2F7;
-            --card: #FFFFFF;
-            --card-elevated: #FFFFFF;
-            --text: #1C1C1E;
-            --text-secondary: #636366;
-            --border: #E5E5EA;
-            --divider: rgba(142, 142, 147, 0.20);
-            --shadow: 0 4px 14px rgba(0, 0, 0, 0.055), 0 1px 4px rgba(0, 0, 0, 0.03);
+            --surface: #FFFFFF;
+            --text: #000000;
+            --text-muted: #5C5C62;
+            --border: rgba(0, 0, 0, 0.08);
+            --divider: rgba(0, 0, 0, 0.06);
+            --control-bg: rgba(0, 0, 0, 0.04);
+            --control-active: #000000;
+            --control-active-fg: #FFFFFF;
+            --link: #000000;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg: #0F111A;
-                --card: #161A25;
-                --card-elevated: #1C212E;
-                --text: #FFFFFF;
-                --text-secondary: #A1A1A6;
-                --border: #262C3D;
-                --divider: rgba(161, 161, 166, 0.18);
-                --accent-glow: rgba(0, 196, 180, 0.14);
-                --accent-glow-strong: rgba(0, 196, 180, 0.22);
-                --shadow: 0 12px 28px rgba(0, 0, 0, 0.44);
+                --bg: #0C0C0E;
+                --surface: #0C0C0E;
+                --text: #ECECF1;
+                --text-muted: #A1A1A6;
+                --border: rgba(255, 255, 255, 0.08);
+                --divider: rgba(255, 255, 255, 0.06);
+                --control-bg: rgba(255, 255, 255, 0.06);
+                --control-active: #ECECF1;
+                --control-active-fg: #0C0C0E;
+                --link: #ECECF1;
             }
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { -webkit-text-size-adjust: 100%; }
 
         body {
-            font-family: "Inter", "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
             background: var(--bg);
             color: var(--text);
-            background-image:
-                radial-gradient(circle at 12% 4%, var(--accent-glow-strong) 0, transparent 38%),
-                radial-gradient(circle at 100% 12%, var(--accent-glow) 0, transparent 45%);
-            line-height: 1.65;
-            padding: 20px;
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: 48px 24px 96px;
         }
 
         .container {
-            max-width: 860px;
+            max-width: 680px;
             margin: 0 auto;
-            background: linear-gradient(
-                180deg,
-                rgba(255, 255, 255, 0.02) 0%,
-                rgba(255, 255, 255, 0) 100%
-            ), var(--card);
-            border: 1px solid var(--border);
-            border-radius: 28px;
-            padding: 36px;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
         }
 
-        .container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(
-                90deg,
-                transparent 0%,
-                rgba(0, 196, 180, 0.35) 28%,
-                rgba(0, 196, 180, 0.65) 50%,
-                rgba(0, 196, 180, 0.35) 72%,
-                transparent 100%
-            );
-        }
-
-        .hero {
+        header {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 28px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 56px;
         }
 
-        .logo {
+        .brand {
             display: flex;
             align-items: center;
             gap: 12px;
-        }
-
-        .logo-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            box-shadow: 
-                0 10px 20px rgba(0, 196, 180, 0.18),
-                0 4px 10px rgba(0, 0, 0, 0.12);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .logo:hover .logo-icon {
-            transform: translateY(-1px) scale(1.03);
-            box-shadow: 
-                0 14px 26px rgba(0, 196, 180, 0.22),
-                0 6px 12px rgba(0, 0, 0, 0.14);
-        }
-
-        .logo-text {
-            font-size: 23px;
-            font-weight: 800;
-            letter-spacing: -0.03em;
+            text-decoration: none;
             color: var(--text);
         }
 
-        .logo-text strong {
+        .brand-mark {
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
+            display: block;
+        }
+
+        .brand-name {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
             color: var(--text);
-            font-weight: 800;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: var(--control-bg);
+            border-radius: 999px;
+            padding: 3px;
+        }
+
+        .lang-btn {
+            appearance: none;
+            border: none;
+            background: transparent;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: color 0.15s ease, background 0.15s ease;
+        }
+
+        .lang-btn:hover { color: var(--text); }
+
+        .lang-btn.active {
+            color: var(--control-active-fg);
+            background: var(--control-active);
         }
 
         h1 {
-            font-size: clamp(28px, 4vw, 36px);
-            line-height: 1.1;
-            letter-spacing: -0.04em;
-            margin: 2px 0 0;
-            color: var(--text);
+            font-size: clamp(32px, 5vw, 44px);
+            line-height: 1.08;
+            letter-spacing: -0.035em;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
 
         .updated {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            width: fit-content;
-            color: var(--text-secondary);
+            color: var(--text-muted);
             font-size: 14px;
-            margin: 0;
-            padding: 8px 12px;
-            background: var(--card-elevated);
-            border: 1px solid var(--border);
-            border-radius: 12px;
+            margin-bottom: 40px;
         }
 
-        .updated::before {
-            content: "";
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--text-secondary);
+        .intro {
+            font-size: 18px;
+            line-height: 1.55;
+            color: var(--text);
+            margin-bottom: 48px;
+            letter-spacing: -0.005em;
         }
 
         h2 {
             font-size: 20px;
-            margin-top: 32px;
-            margin-bottom: 16px;
+            font-weight: 600;
+            letter-spacing: -0.015em;
             color: var(--text);
-            letter-spacing: -0.02em;
-            padding-left: 14px;
-            position: relative;
-        }
-
-        h2::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0.25em;
-            width: 4px;
-            height: 1.05em;
-            border-radius: 999px;
-            background: linear-gradient(
-                180deg,
-                rgba(0, 196, 180, 0.50),
-                rgba(0, 196, 180, 0.15)
-            );
+            margin-top: 44px;
+            margin-bottom: 14px;
         }
 
         h3 {
-            font-size: 16px;
-            margin-top: 20px;
-            margin-bottom: 12px;
+            font-size: 15px;
+            font-weight: 600;
             color: var(--text);
-            letter-spacing: -0.01em;
-        }
-
-        p {
-            margin-bottom: 16px;
-            color: var(--text-secondary);
-        }
-
-        ul {
-            margin-bottom: 16px;
-            padding-left: 24px;
-            color: var(--text-secondary);
-        }
-
-        li::marker {
-            color: var(--text-secondary);
-        }
-
-        li {
+            margin-top: 24px;
             margin-bottom: 8px;
         }
 
-        strong {
-            color: var(--text);
+        p {
+            color: var(--text-muted);
+            margin-bottom: 14px;
         }
 
-        .highlight {
-            background:
-                linear-gradient(180deg, rgba(0, 196, 180, 0.06), rgba(0, 196, 180, 0.02));
-            border: 1px solid var(--border);
-            border-left: 4px solid rgba(0, 196, 180, 0.55);
-            padding: 18px;
-            border-radius: 14px;
-            margin: 20px 0;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        p strong, li strong { color: var(--text); font-weight: 600; }
+
+        ul {
+            list-style: none;
+            margin-bottom: 14px;
+            padding: 0;
         }
 
-        .highlight p {
-            margin: 0;
-            color: var(--text);
+        li {
+            color: var(--text-muted);
+            padding-left: 18px;
+            position: relative;
+            margin-bottom: 6px;
         }
 
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--divider);
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 14px;
+        li::before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 0.7em;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            opacity: 0.5;
         }
 
         a {
-            color: var(--accent);
-            text-decoration: none;
+            color: var(--link);
+            text-decoration: underline;
             text-underline-offset: 2px;
-            text-decoration-color: rgba(0, 196, 180, 0.35);
+            text-decoration-thickness: 1px;
+            text-decoration-color: var(--border);
+            transition: text-decoration-color 0.15s ease;
         }
 
-        a:hover {
-            text-decoration: underline;
-            text-decoration-color: rgba(0, 196, 180, 0.65);
+        a:hover { text-decoration-color: var(--text); }
+
+        .footer {
+            margin-top: 72px;
+            padding-top: 24px;
+            border-top: 1px solid var(--divider);
+            color: var(--text-muted);
+            font-size: 13px;
         }
+
+        .footer a { color: var(--text-muted); }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
 
         @media (max-width: 640px) {
-            body {
-                padding: 14px;
-            }
-
-            .container {
-                padding: 22px 18px;
-                border-radius: 20px;
-            }
-
-            .logo-icon {
-                width: 46px;
-                height: 46px;
-                border-radius: 12px;
-            }
-
-            .logo-text {
-                font-size: 20px;
-            }
-
-            h2 {
-                margin-top: 26px;
-            }
+            body { padding: 32px 20px 72px; font-size: 15px; }
+            header { margin-bottom: 40px; }
+            .intro { font-size: 16.5px; margin-bottom: 36px; }
+            h1 { font-size: 32px; }
+            h2 { margin-top: 36px; font-size: 18px; }
+            .brand-mark { width: 32px; height: 32px; border-radius: 8px; }
+            .lang-btn { padding: 5px 11px; font-size: 12px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="hero">
-            <div class="logo">
-                <img src="app_icon.png" alt="KAPIK" class="logo-icon">
-                <span class="logo-text"><strong>KAPIK</strong> Privacy</span>
+        <header>
+            <a href="#" class="brand" aria-label="KAPIK">
+                <img src="app_icon.png" alt="" class="brand-mark">
+                <span class="brand-name">KAPIK</span>
+            </a>
+            <div class="lang-switch" role="tablist" aria-label="Language">
+                <button type="button" class="lang-btn" data-lang="en" role="tab" aria-selected="false">EN</button>
+                <button type="button" class="lang-btn" data-lang="uk" role="tab" aria-selected="false">UK</button>
             </div>
-            <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: January 27, 2026</p>
         </header>
 
-        <h2>Introduction</h2>
-        <p>KAPIK ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+        <!-- ENGLISH -->
+        <main class="lang-content" data-lang="en">
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last updated April 20, 2026</p>
 
-        <div class="highlight">
-            <p><strong>Key Points:</strong> KAPIK stores all your data locally on your device by default. If you enable optional AI-powered receipt parsing, OCR text may be sent to third-party AI services (Google Gemini or Groq) for processing.</p>
-        </div>
+            <p class="intro">KAPIK keeps your financial data on your device. The app goes online only to fetch public exchange rates and — if you explicitly enable it — to parse receipts through an AI provider of your choice, using your own API key.</p>
 
-        <h2>Information We Collect</h2>
+            <h2>What stays on your device</h2>
+            <p>Everything personal — accounts, balances, expenses, income, receipts, categories, tags, budgets, recurring payments — is stored locally in a SQLite database. Nothing is synced to a cloud by default.</p>
 
-        <h3>Data Stored Locally</h3>
-        <p>All your data is stored <strong>locally on your device</strong>. This includes:</p>
-        <ul>
-            <li>Expense records</li>
-            <li>Receipt images and OCR data</li>
-            <li>Categories and budgets</li>
-            <li>Recurring payments</li>
-            <li>Tags and preferences</li>
-        </ul>
+            <h2>Permissions we use</h2>
+            <p><strong>Camera</strong> to scan receipts. Images are processed on-device with Google ML Kit OCR and never leave your phone.</p>
+            <p><strong>Photo library</strong> so you can pick existing receipt images. Processed locally.</p>
+            <p><strong>Notifications</strong> for local reminders about upcoming payments. No push service, no external server.</p>
 
-        <h3>Camera Access</h3>
-        <p>We request camera access solely for scanning receipts. Images are processed locally on your device using on-device OCR technology and are not transmitted to any external servers.</p>
+            <h2>Exchange rates</h2>
+            <p>For multi-currency accounts, KAPIK fetches rates from public APIs: <a href="https://api.monobank.ua" target="_blank" rel="noopener">Monobank</a>, <a href="https://frankfurter.app" target="_blank" rel="noopener">frankfurter.app</a> (ECB data), and the <a href="https://bank.gov.ua" target="_blank" rel="noopener">National Bank of Ukraine</a>. These requests carry no personal data and no transaction details — just the currency pair. Results are cached locally.</p>
 
-        <h3>Photo Library Access</h3>
-        <p>We request photo library access to allow you to select existing images of receipts for scanning. Selected images are processed locally.</p>
+            <h2>Optional AI receipt parsing</h2>
+            <p>You can turn on AI parsing to improve receipt accuracy. It's <strong>off by default</strong> and requires your own API key.</p>
+            <p>When enabled, the OCR text — not the image — is sent to the provider you chose: <strong>Google Gemini</strong> or <strong>Groq</strong>. You can disable it in Settings at any time. The app works fully offline without it.</p>
 
-        <h3>Notifications</h3>
-        <p>If you enable notifications, we use local notifications to remind you about scheduled payments. No notification data is sent to external servers.</p>
+            <h2>What we don't do</h2>
+            <ul>
+                <li>No ads, no analytics SDKs, no crash reporting SDKs, no trackers.</li>
+                <li>No cloud backup or sync by default.</li>
+                <li>No sale or sharing of your data with third parties.</li>
+                <li>No access to your API keys or to data sent directly to AI providers.</li>
+            </ul>
 
-        <h3>AI Receipt Parsing (Optional)</h3>
-        <p>KAPIK offers an <strong>optional</strong> AI-powered receipt parsing feature that can improve accuracy when scanning receipts. This feature is <strong>disabled by default</strong> and requires you to provide your own API key.</p>
-        <p>When enabled, OCR-extracted text from your receipts may be sent to one of the following AI services for parsing:</p>
-        <ul>
-            <li><strong>Google Gemini</strong> — Google's AI service</li>
-            <li><strong>Groq</strong> — Groq's LLM inference service</li>
-        </ul>
-        <p><strong>Important:</strong></p>
-        <ul>
-            <li>Only the text extracted from receipts is sent — <strong>not the images themselves</strong></li>
-            <li>You choose which AI provider to use and provide your own API key</li>
-            <li>You can disable AI parsing at any time in Settings</li>
-            <li>Results are cached locally to minimize API requests</li>
-            <li>You can use the app in fully offline mode without any AI features</li>
-        </ul>
+            <h2>Your data, your control</h2>
+            <p>Export everything to CSV whenever you want. Import CSV to restore or merge. Uninstalling the app deletes all data from your device.</p>
 
-        <h2>Data Storage</h2>
-        <p>All data is stored locally on your device using an encrypted SQLite database. Your data remains on your device and is not synced to any cloud service.</p>
+            <h2>Children</h2>
+            <p>KAPIK is not intended for children under 13. We do not knowingly collect information from children.</p>
 
-        <h2>Data Sharing</h2>
-        <p>We do <strong>not</strong> share, sell, or transfer your personal data to third parties. Your financial information stays on your device.</p>
-        <p>If you enable AI receipt parsing, OCR text is sent directly from your device to the AI provider you selected (Google or Groq) using your own API key. We do not have access to this data or your API keys.</p>
+            <h2>Changes</h2>
+            <p>If this policy changes, we'll update the date above.</p>
 
-        <h2>Data Export</h2>
-        <p>You can export your expense data to CSV format. This export is performed locally, and you control how and where to share the exported file.</p>
+            <h2>Contact</h2>
+            <p>Questions? Write to <a href="mailto:bilouss.edu@gmail.com">bilouss.edu@gmail.com</a>.</p>
 
-        <h2>Third-Party Services</h2>
-        
-        <h3>On-Device (No Data Sent)</h3>
-        <ul>
-            <li><strong>Google ML Kit</strong> — For on-device OCR text recognition. All processing happens locally on your device.</li>
-        </ul>
+            <div class="footer">© 2026 KAPIK</div>
+        </main>
 
-        <h3>Cloud Services (Optional, User-Enabled)</h3>
-        <p>If you enable AI receipt parsing, the following services may be used:</p>
-        <ul>
-            <li><strong>Google Gemini API</strong> — For AI-powered receipt text parsing. Subject to <a href="https://ai.google.dev/terms" target="_blank">Google's API Terms</a>.</li>
-            <li><strong>Groq API</strong> — Alternative AI provider for receipt parsing. Subject to <a href="https://groq.com/terms-of-use/" target="_blank">Groq's Terms of Use</a>.</li>
-        </ul>
-        <p>These services only receive OCR text when you explicitly enable AI parsing and provide your own API key. No data is sent to these services by default.</p>
+        <!-- UKRAINIAN -->
+        <main class="lang-content" data-lang="uk">
+            <h1>Політика конфіденційності</h1>
+            <p class="updated">Останнє оновлення: 20 квітня 2026 року</p>
 
-        <h2>Children's Privacy</h2>
-        <p>KAPIK is not intended for children under 13 years of age. We do not knowingly collect personal information from children.</p>
+            <p class="intro">KAPIK зберігає ваші фінансові дані на вашому пристрої. Застосунок виходить в інтернет лише для отримання публічних валютних курсів і — якщо ви самі ввімкнете цю опцію — для розпізнавання чеків через обраного AI-провайдера з вашим власним API-ключем.</p>
 
-        <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last updated" date.</p>
+            <h2>Що залишається на пристрої</h2>
+            <p>Усе особисте — рахунки, баланси, витрати, доходи, чеки, категорії, теги, бюджети, регулярні платежі — зберігається локально в базі даних SQLite. За замовчуванням нічого не синхронізується в хмару.</p>
 
-        <h2>Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Access all your data (stored locally on your device)</li>
-            <li>Delete all your data by uninstalling the app</li>
-            <li>Export your data at any time</li>
-            <li>Disable AI features and use the app fully offline</li>
-            <li>Choose your preferred AI provider or use none at all</li>
-        </ul>
+            <h2>Дозволи, які ми використовуємо</h2>
+            <p><strong>Камера</strong> — для сканування чеків. Зображення обробляються на пристрої через Google ML Kit OCR і не залишають телефон.</p>
+            <p><strong>Фотобібліотека</strong> — щоб ви могли вибрати наявні зображення чеків. Обробка локальна.</p>
+            <p><strong>Сповіщення</strong> — локальні нагадування про майбутні платежі. Без push-сервісу, без зовнішнього сервера.</p>
 
-        <h2>Contact Us</h2>
-        <p>If you have questions about this Privacy Policy, please contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:bilouss.edu@gmail.com">bilouss.edu@gmail.com</a></p>
+            <h2>Валютні курси</h2>
+            <p>Для мультивалютних рахунків KAPIK отримує курси з публічних API: <a href="https://api.monobank.ua" target="_blank" rel="noopener">Monobank</a>, <a href="https://frankfurter.app" target="_blank" rel="noopener">frankfurter.app</a> (дані ЄЦБ) і <a href="https://bank.gov.ua" target="_blank" rel="noopener">Національного банку України</a>. Ці запити не містять ні персональних даних, ні деталей ваших операцій — лише валютну пару. Результати кешуються локально.</p>
 
-        <div class="footer">
-            <p>© 2026 KAPIK. All rights reserved.</p>
-        </div>
+            <h2>Опційне AI-розпізнавання чеків</h2>
+            <p>Ви можете ввімкнути AI-розпізнавання, щоб підвищити точність сканування чеків. Функція <strong>вимкнена за замовчуванням</strong> і вимагає вашого власного API-ключа.</p>
+            <p>Коли її увімкнено, OCR-текст — а не зображення — надсилається обраному провайдеру: <strong>Google Gemini</strong> або <strong>Groq</strong>. Ви можете вимкнути це в Налаштуваннях будь-коли. Без цієї функції застосунок повністю працює офлайн.</p>
+
+            <h2>Чого ми не робимо</h2>
+            <ul>
+                <li>Жодної реклами, аналітики, звітування про збої, трекерів.</li>
+                <li>Жодної хмарної синхронізації чи резервного копіювання за замовчуванням.</li>
+                <li>Не продаємо і не ділимось вашими даними зі сторонніми.</li>
+                <li>Не маємо доступу ні до ваших API-ключів, ні до даних, надісланих AI-провайдерам.</li>
+            </ul>
+
+            <h2>Ваші дані — ваш контроль</h2>
+            <p>Експортуйте все у CSV будь-коли. Імпортуйте CSV для відновлення чи об'єднання. Видалення застосунку стирає всі дані з пристрою.</p>
+
+            <h2>Діти</h2>
+            <p>KAPIK не призначений для дітей до 13 років. Ми свідомо не збираємо інформацію від дітей.</p>
+
+            <h2>Зміни</h2>
+            <p>Якщо ця політика зміниться, ми оновимо дату вгорі.</p>
+
+            <h2>Контакт</h2>
+            <p>Запитання? Пишіть на <a href="mailto:bilouss.edu@gmail.com">bilouss.edu@gmail.com</a>.</p>
+
+            <div class="footer">© 2026 KAPIK</div>
+        </main>
     </div>
+
+    <script>
+        (function () {
+            var SUPPORTED = ['en', 'uk'];
+
+            function resolveInitialLang() {
+                var hash = (window.location.hash || '').replace('#', '').toLowerCase();
+                if (SUPPORTED.indexOf(hash) !== -1) return hash;
+
+                var stored = null;
+                try { stored = localStorage.getItem('kapik-privacy-lang'); } catch (e) {}
+                if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
+
+                var nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+                if (nav.indexOf('uk') === 0 || nav.indexOf('ru') === 0) return 'uk';
+                return 'en';
+            }
+
+            function setLang(lang, opts) {
+                if (SUPPORTED.indexOf(lang) === -1) lang = 'en';
+                opts = opts || {};
+
+                document.documentElement.lang = lang;
+                document.title = lang === 'uk'
+                    ? 'Політика конфіденційності — KAPIK'
+                    : 'Privacy Policy — KAPIK';
+
+                var sections = document.querySelectorAll('.lang-content');
+                for (var i = 0; i < sections.length; i++) {
+                    sections[i].classList.toggle('active', sections[i].getAttribute('data-lang') === lang);
+                }
+
+                var buttons = document.querySelectorAll('.lang-btn');
+                for (var j = 0; j < buttons.length; j++) {
+                    var active = buttons[j].getAttribute('data-lang') === lang;
+                    buttons[j].classList.toggle('active', active);
+                    buttons[j].setAttribute('aria-selected', active ? 'true' : 'false');
+                }
+
+                try { localStorage.setItem('kapik-privacy-lang', lang); } catch (e) {}
+
+                if (opts.updateHash !== false) {
+                    if (history.replaceState) {
+                        history.replaceState(null, '', '#' + lang);
+                    } else {
+                        window.location.hash = lang;
+                    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                setLang(resolveInitialLang(), { updateHash: false });
+
+                var buttons = document.querySelectorAll('.lang-btn');
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].addEventListener('click', function () {
+                        setLang(this.getAttribute('data-lang'));
+                    });
+                }
+
+                window.addEventListener('hashchange', function () {
+                    var h = (window.location.hash || '').replace('#', '').toLowerCase();
+                    if (SUPPORTED.indexOf(h) !== -1) setLang(h, { updateHash: false });
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
